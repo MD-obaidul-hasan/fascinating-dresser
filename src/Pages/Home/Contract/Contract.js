@@ -10,7 +10,7 @@ const Contract = () => {
         <p className='my-5'>Contract with me, if you wan to book for appoitment.</p>
     </div>
        
-        <div className=" mr-25flex justify-center card w-3/4 bg-base-100 shadow-xl image-full">
+        <div className=" mr-25flex justify-center card w-4/4 bg-base-100 shadow-xl image-full">
              
         <figure><img src=
         {design} alt="Desser" /></figure>
