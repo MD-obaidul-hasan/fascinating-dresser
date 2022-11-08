@@ -15,8 +15,8 @@ const Contract = () => {
         <figure><img src=
         {design} alt="Desser" /></figure>
         <div className="card-body">
-          <h2 className="card-title">SContract with Me</h2>
-          <p>Name:Md.Obaidul Hasan <br/>
+          <h2 className="card-title text-center">Contract with Me</h2>
+          <p className='text-center'>Name:Md.Obaidul Hasan <br/>
              Email:md.obaidulhasanlimu@gmail.com<br/>
              cell no:017..........<br/>
              Address:H-32/2, Road:6-b<br/>
