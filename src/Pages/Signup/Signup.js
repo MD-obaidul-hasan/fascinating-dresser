@@ -1,13 +1,13 @@
 // import { createUserWithEmailAndPassword } from 'firebase/auth';
 import React, { useContext } from 'react';
 
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 
 const Signup = () => {
-
+  const {createUser} = useContext(AuthContext);
+  const navigate = useNavigate()
     const handleSignup = event =>{
-        const {createUser} = useContext(AuthContext);
         // const {reateUser} = useContext(AuthContext);
         event.preventDefault();
         const form = event.target;
@@ -18,6 +18,7 @@ const Signup = () => {
         .then(result => {
             const user = result.user;
             console.log(user);
+            navigate('/'); 
         })
         .catch(err => console.error(err));
 

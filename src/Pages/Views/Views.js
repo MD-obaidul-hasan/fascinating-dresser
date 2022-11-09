@@ -40,7 +40,7 @@ const Views = () => {
             headers: {
                 'content-type': 'application/json'
             },
-            body:JSON.stringify({status: 'Approved'})
+            body: JSON.stringify({status: 'Approved'})
         })
         .then(res => res.json())
         .then(data => {
