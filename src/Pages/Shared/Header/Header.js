@@ -1,15 +1,25 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../context/AuthProvider/AuthProvider';
 import logo from '../../../Image/fdelogos.PNG'
 // import { img } from "../../../Image/fdelogos.PNG";
 
 const Header = () => {
+  const {user} = useContext(AuthContext);
 
     const menuItems = <>
     <li className='font-semibold'><Link to='/'>Home</Link></li>
-    <li className='font-semibold'><Link to='/login'>Login</Link></li>
-    <li className='font-semibold'><Link to='/service'>Service</Link></li>
-    <li className='font-semibold'><Link to='/Blog'>Blog</Link></li>
+    {
+      user?.email ?
+      <>
+       <li className='font-semibold'><Link to='/orders'>Orders</Link></li>
+      </>
+      :
+      <li className='font-semibold'><Link to='/login'>Login</Link></li>
+    }
+    
+    {/* <li className='font-semibold'><Link to='/service'>Service</Link></li>
+    <li className='font-semibold'><Link to='/Blog'>Blog</Link></li> */}
     </>
     return (
         <div className="navbar h-20 mb-12 pt-12 bg-base-100">

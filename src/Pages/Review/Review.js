@@ -23,6 +23,31 @@ const Review = () => {
             phone,
             message       
          }
+        //  if (phone.length > 10){
+        //     alert('Phone number should be 10 charecter or longer')
+        //  }
+        //  else{
+
+        //  }
+
+         fetch('http://localhost:5000/orders', {
+            method: 'POST',
+            headers:{
+                'content-type': 'application/json'
+            },
+            body.JSON.stringify(order)
+         })
+         .then(res => res.json())
+         .then(data => {
+            console.log(data)
+            if(data.acknowledged){
+                alert('Order place successfully')
+                form.reset();
+            }
+
+        })
+         .catch(er => console.error(er));
+
      }
     return (
         <div>
@@ -33,11 +58,11 @@ const Review = () => {
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
                     <input name='firstName' type="text" placeholder="First Name" className="input input-ghost w-full  input-bordered " />
                     <input name='lastName' type="text" placeholder="Last Name" className="input input-ghost w-full input-bordered" />
-                     <input name='Phone' type="text" placeholder="Your Phone" className="input input-ghost w-full input-bordered " />
+                     <input name='Phone' type="text" placeholder="Your Phone" className="input input-ghost w-full input-bordered "required />
                     <input name='Email' type="text" placeholder="Your Email" defaultValue={user?.email}  className="input input-ghost w-full input-bordered" readOnly/>
                 </div>
                 
-                <textarea name='massage' className="textarea textarea-bordered h-24 w-full" placeholder="Your review"></textarea>
+                <textarea name='massage' className="textarea textarea-bordered h-24 w-full" placeholder="Your review" required></textarea>
                 <input className='btn' type='submit' value='place your order'></input>
             </form>
             
