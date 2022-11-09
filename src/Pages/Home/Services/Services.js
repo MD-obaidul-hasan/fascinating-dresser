@@ -30,7 +30,7 @@ const Services = () => {
                     ></ServiceCard>)
                 }
             </div>
-            <Link to={`/service`}> <button className="justify-center btn btn-gray-600">see more</button></Link>
+            <Link to={`/services`}> <button className="justify-center btn btn-gray-600">see more</button></Link>
             
         </div>
     );

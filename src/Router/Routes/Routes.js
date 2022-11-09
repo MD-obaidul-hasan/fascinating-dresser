@@ -1,9 +1,10 @@
 import Main from "../../Layout/Main";
 import Blog from "../../Pages/Blog/Blog"
 import Home from "../../Pages/Home/Home/Home";
+import Services from "../../Pages/Home/Services/Services";
 import Login from "../../Pages/Login/Login";
 import Review from "../../Pages/Review/Review";
-import Service from "../../Pages/Service/Service";
+// import Service from "../../Pages/Service/Service";
 import Signup from "../../Pages/Signup/Signup";
 import Views from "../../Pages/Views/Views";
 
@@ -41,8 +42,8 @@ const router = createBrowserRouter([
           element:<Blog></Blog>
         },
         {
-          path:'/service',
-          element:<Service></Service>
+          path:'/services',
+          element:<Services></Services>
         }
       ]
     }
