@@ -7,6 +7,7 @@ import Login from "../../Pages/Login/Login";
 import Review from "../../Pages/Review/Review";
 // import Service from "../../Pages/Service/Service";
 import Signup from "../../Pages/Signup/Signup";
+import ViewDetals from "../../Pages/ViewDetals/ViewDetals";
 import Views from "../../Pages/Views/Views";
 
 const { createBrowserRouter } = require("react-router-dom");
@@ -49,6 +50,11 @@ const router = createBrowserRouter([
         {
           path:'/service',
           element:<Service></Service>
+        },
+        {
+          path:'/viewdetals/:id',
+          element:<ViewDetals></ViewDetals>,
+          loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`)
         }
       ]
     }
