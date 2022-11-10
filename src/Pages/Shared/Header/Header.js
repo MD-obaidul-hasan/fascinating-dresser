@@ -12,9 +12,12 @@ const Header = () => {
     {
       user?.email ?
       <>
-       <li className='font-semibold'><Link to='/reviews'>Reviews</Link></li>
+       <li className='font-semibold'><Link to='/oderview'>Reviewder</Link></li>
       </>
       :
+      <li className='font-semibold'><Link to='/login'>Login</Link></li>
+    }
+    {
       <li className='font-semibold'><Link to='/login'>Login</Link></li>
     }
     
