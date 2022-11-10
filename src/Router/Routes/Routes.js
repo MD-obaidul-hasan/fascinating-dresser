@@ -1,6 +1,7 @@
 import Main from "../../Layout/Main";
 import Blog from "../../Pages/Blog/Blog"
 import Home from "../../Pages/Home/Home/Home";
+import Service from "../../Pages/Home/Services/Service";
 import Services from "../../Pages/Home/Services/Services";
 import Login from "../../Pages/Login/Login";
 import Review from "../../Pages/Review/Review";
@@ -30,7 +31,7 @@ const router = createBrowserRouter([
         {
           path: '/review/:id',
           elememnt: <Review></Review>,
-          loader: ({params})=> fetch(`https://fascinating-dresser-server.vercel.app/services/${params.id}`)
+          loader: ({params})=> fetch(`http://localhost:5000/services/${params.id}`)
         },
         {
           path:'/views',
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
         {
           path:'/services',
           element:<Services></Services>
+        },
+        {
+          path:'/service',
+          element:<Service></Service>
         }
       ]
     }

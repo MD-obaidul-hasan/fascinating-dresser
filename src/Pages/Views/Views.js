@@ -7,9 +7,9 @@ const Views = () => {
     const {user} = useContext(AuthContext);
     const [orders, setOrders] = useState({})
 
-    // const url = `https://fascinating-dresser-server.vercel.app/orders?email=${user.email}`;
+    // const url = `http://localhost:5000/orders?email=${user.email}`;
     useEffect(() =>{
-        fetch(`https://fascinating-dresser-server.vercel.app/orders?email=${user?.email}`)
+        fetch(`http://localhost:5000/orders?email=${user?.email}`)
         .then(res => res.json())
         .then(data => setOrders(data))
     },[user?.email])
@@ -18,7 +18,7 @@ const Views = () => {
     const handleDelete = id =>{
         const proceed = window.confirm('Are you sure, cancle this order');
         if(proceed){
-            fetch(`https://fascinating-dresser-server.vercel.app/orders/${id}`,{
+            fetch(`http://localhost:5000/orders/${id}`,{
                 method: 'DELETE'
             })
             .then(res => res.json())
@@ -35,7 +35,7 @@ const Views = () => {
     }
 
     const handleStatusUpdate = id => {
-        fetch(`https://fascinating-dresser-server.vercel.app/orders/${id}`,{
+        fetch(`http://localhost:5000/orders/${id}`,{
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'

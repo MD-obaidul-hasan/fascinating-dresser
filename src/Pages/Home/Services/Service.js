@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import ServiceCard from './ServiceCard';
 
-const Services = () => {
-    const [services, setServices] = useState([]);
+const Service = () => {
+    const [service, setService] = useState([]);
     
     useEffect(() =>{
-        fetch('http://localhost:5000/services')
+        fetch('http://localhost:5000/service')
         .then(res =>res.json())
-        .then(data => setServices(data))
+        .then(data => setService(data))
     }, []);
 
     
@@ -24,16 +24,16 @@ const Services = () => {
             <div className='grid  gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
                 {/* <h2>services:{services.length}</h2> */}
                 {
-                    services.map(service => <ServiceCard
+                    service.map(service => <ServiceCard
                         key={service._id}
                         service={service}
                     ></ServiceCard>)
                 }
             </div>
-            <Link to={`/service`}> <button className="justify-center btn btn-gray-600">see more</button></Link>
+            {/* <Link to={`/service`}> <button className="justify-center btn btn-gray-600">see more</button></Link> */}
             
         </div>
     );
 };
 
-export default Services;
+export default Service;
