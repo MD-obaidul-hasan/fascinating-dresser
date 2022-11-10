@@ -6,7 +6,7 @@ const ViewsRow = ({order, handleDelete, handleStatusUpdate}) => {
     const [orderService, setOrderService] = useState([])
 
 useEffect(() =>{
-    fetch(`http://localhost:5000/services/${service}`)
+    fetch(`http://localhost:5000/service/${service}`)
     .then(res => res.json())
     .then(data => setOrderService(data));
 }, [service])
