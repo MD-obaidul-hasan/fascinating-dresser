@@ -31,14 +31,14 @@
 
 //         //  }
 
-//         //  fetch('http://localhost:5000/reviews', {
+//         //  fetch('https://fascinating-dresser-server.vercel.app/reviews', {
 //         //     method: 'POST',
 //         //     headers:{
 //         //         'content-type': 'application/json'
 //         //     },
 //         //     body: JSON.stringify(order)
 //         //  })
-//         fetch(`http://localhost:5000/reviews?
+//         fetch(`https://fascinating-dresser-server.vercel.app/reviews?
 //         id=${data.service_id}`)
 //          .then(res => res.json())
 //          .then(data => {
@@ -85,7 +85,7 @@ const Review = () => {
     const [review, setReview] =useState([]);
 
     useEffect(() =>{
-        fetch('http://localhost:5000/review')
+        fetch('https://fascinating-dresser-server.vercel.app/review')
         .then(res => res.json())
         .then(data => setReview(data))
     }, []);

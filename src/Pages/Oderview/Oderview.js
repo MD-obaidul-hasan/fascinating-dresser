@@ -7,7 +7,7 @@ const Oderview = () => {
     const [oderview, setOderview] = useState({})
 
     useEffect(() =>{
-        fetch(`http://localhost:5000/orders?email=${user}`)
+        fetch(`https://fascinating-dresser-server.vercel.app/orders?email=${user}`)
         .then(res => res.json())
         .then(data =>setOderview(data))
     }, [user?.email])
