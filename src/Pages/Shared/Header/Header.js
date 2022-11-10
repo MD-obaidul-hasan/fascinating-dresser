@@ -9,10 +9,12 @@ const Header = () => {
 
     const menuItems = <>
     <li className='font-semibold'><Link to='/'>Home</Link></li>
+    <li className='font-semibold'><Link to='/services'>Services</Link></li>
+    <li className='font-semibold'><Link to='/Blog'>Blog</Link></li>
     {
       user?.email ?
       <>
-       <li className='font-semibold'><Link to='/oderview'>Reviewder</Link></li>
+       <li className='font-semibold'><Link to='/oderview'>ReviewOder</Link></li>
       </>
       :
       <li className='font-semibold'><Link to='/login'>Login</Link></li>
@@ -21,8 +23,7 @@ const Header = () => {
       <li className='font-semibold'><Link to='/login'>Login</Link></li>
     }
     
-    <li className='font-semibold'><Link to='/services'>Services</Link></li>
-    <li className='font-semibold'><Link to='/Blog'>Blog</Link></li>
+    
     </>
     return (
         <div className="navbar h-20 mb-12 pt-12 bg-base-100">
