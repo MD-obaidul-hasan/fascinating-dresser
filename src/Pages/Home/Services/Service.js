@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import ServiceCard from './ServiceCard';
 
 const Service = () => {
     const [service, setService] = useState([]);
     
     useEffect(() =>{
-        fetch('https://fascinating-dresser-server.vercel.app/service')
+        fetch('https://fascinating-dresser-server-md-obaidul-hasan.vercel.app/service')
         .then(res =>res.json())
         .then(data => setService(data))
     }, []);

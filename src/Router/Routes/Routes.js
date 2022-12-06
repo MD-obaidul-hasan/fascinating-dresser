@@ -48,7 +48,7 @@ const router = createBrowserRouter([
         {
           path:'/viewdetals/:id',
           element:<ViewDetals></ViewDetals>,
-          loader: ({params}) => fetch(`https://fascinating-dresser-server.vercel.app/services/${params.id}`)
+          loader: ({params}) => fetch(`https://fascinating-dresser-server-md-obaidul-hasan.vercel.app/services/${params.id}`)
         },
         {
           path:'/oderview',

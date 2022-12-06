@@ -6,7 +6,7 @@ const OderviewRow = ({order}) => {
     const [orderService, setOrderService] = useState({})
 
     useEffect(() =>{
-        fetch(`https://fascinating-dresser-server.vercel.app/services/${service}`)
+        fetch(`https://fascinating-dresser-server-md-obaidul-hasan.vercel.app/services/${service}`)
         .then(res => res.json())
         .then(data => setOrderService(data));
     }, [service])

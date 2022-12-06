@@ -9,7 +9,7 @@ const Header = () => {
 
     const menuItems = <>
     <li className='font-semibold'><Link to='/'>Home</Link></li>
-    <li className='font-semibold'><Link to='/services'>Services</Link></li>
+    <li className='font-semibold'><Link to='/service'>Service</Link></li>
     <li className='font-semibold'><Link to='/Blog'>Blog</Link></li>
     {
       user?.email ?

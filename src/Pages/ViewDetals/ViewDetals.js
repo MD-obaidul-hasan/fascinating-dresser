@@ -31,7 +31,7 @@ const ViewDetals = () => {
 
         // }
 
-        fetch('https://fascinating-dresser-server.vercel.app/orders', {
+        fetch('https://fascinating-dresser-server-md-obaidul-hasan.vercel.app/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
