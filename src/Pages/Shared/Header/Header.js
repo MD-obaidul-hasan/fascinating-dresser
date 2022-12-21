@@ -70,7 +70,7 @@ const Header = () => {
           </ul>
         </div>
         <div className="navbar-end">
-        <button className="btn btn-outline btn-warning">Appoinment</button>
+        {/* <button className="btn btn-outline btn-warning"></button> */}
           {/* <a className="btn">Get started</a> */}
         </div>
       </div>
